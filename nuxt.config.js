@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'myTestNuxtApp',
+    title: 'vue-component-reuse-lost-focuse-issue-study',
     htmlAttrs: {
       lang: 'en'
     },
