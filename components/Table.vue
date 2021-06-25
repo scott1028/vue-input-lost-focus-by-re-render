@@ -31,6 +31,8 @@ export default {
                 /* TESTCASE-02: Ref: https://forum.vuejs.org/t/how-to-prevent-a-list-from-getting-reordered-upon-updating-an-element/85944/4
                                 Not sure if we skip key, it will always be re-rendered or not.
                                 Duplicate keys detected: 'xxxx'. This may cause an update error.
+
+                   Caveat! Also Vue will use `key` prop to control if this component should be rerender or not, in case you use same component definition.
                  */
                 <DefaultRow key={idx}>
                   <td><Component item={item} /></td>
