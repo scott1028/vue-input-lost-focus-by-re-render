@@ -32,10 +32,15 @@ export default {
                                 Not sure if we skip key, it will always be re-rendered or not.
                                 Duplicate keys detected: 'xxxx'. This may cause an update error.
 
-                   Caveat! Also Vue will use `key` prop and the rest of rendering component `props` to determine if this component should be rerender or not,
+                   Caveat! There is a special prop named `key`, it will be supported for any component by default.
+                   Also Vue will use `key` prop and the rest of this rendered-component's `props` to determine if this component should be rerender or not,
                    in case you use same component definition. For example, when you interact with a input tag of a row,
                    you should make `key` of row refer to same value so that when you trigger `onInput` event,
                    the whole DOM of row will not be re-rendered and cause focus-losing.
+                   
+                   <Row key={key}>  <= if key value is not changed, `Row` component will not be rerendered.
+                    <Cell item={item} />  <= if your `item` prop is changed,`Cell` component will be rerendered. Event though `Row` component is not rendered.
+                   </Row>
                  */
                 <DefaultRow key={idx}>
                   <td><Component item={item} /></td>
