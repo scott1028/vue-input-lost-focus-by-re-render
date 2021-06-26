@@ -39,7 +39,7 @@ export default {
                    the whole `DOM` of row will not be re-rendered and cause focus-losing.
 
                    [Important]
-                   In most of situations, `component` or `key` changed cause this DOM rerendering issue.
+                   In most of situations, `component` or `key` changed cause this `interactive DOM` like `input` re-rendering issue.
                    Here I say again that only whole `DOM` rerendered causes focus-losing issue,
                    if it's just event component re-binding that will not cause this issue.
 
