@@ -36,8 +36,13 @@ export default {
                    Also Vue will use `key` prop and the rest of this rendered-component's `props` to determine if this component should be rerender or not,
                    in case you use same component definition. For example, when you interact with a input tag of a row,
                    you should make `key` of row refer to same value so that when you trigger `onInput` event,
-                   the whole DOM of row will not be re-rendered and cause focus-losing.
-                   
+                   the whole `DOM` of row will not be re-rendered and cause focus-losing.
+
+                   [Important]
+                   In most of situations, `component` or `key` changed cause this DOM rerendering issue.
+                   Here I say again that only whole `DOM` rerendered causes focus-losing issue,
+                   if it's just event component re-binding that will not cause this issue.
+
                    <Row key={key}>  <= if key value is not changed, `Row` component will not be rerendered.
                     <Cell item={item} />  <= if your `item` prop is changed,`Cell` component will be rerendered. Event though `Row` component is not rendered.
                    </Row>
